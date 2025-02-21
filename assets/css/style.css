@@ -77,11 +77,15 @@ nav{
     font-size: 2rem;
 }
 
-/*Main content*/
-main{
-    /*Make main element take up any surplus space to push footer down*/
+/* Main content */
+main {
+    /* Enlarge main element to push footer down*/
     flex: 1 0 auto;
+    /* Add margin at the top to prevent content from being covered by the header */
     margin-top: 47px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
 }
 /*Hero section*/
 #hero{
@@ -168,6 +172,8 @@ main{
 #photos{
     line-height: 0;
 }
+
+
 /* Form */
 #signup {
     background-image: url("../images/signup-image.webp");
@@ -239,6 +245,7 @@ main{
     }
 }
 
+
 /*Media query: tablets and larger (768px and up)*/
 @media screen and (min-width: 768px){
     /*Header */
@@ -250,7 +257,7 @@ main{
         padding-right: 1rem;
     }
     #menu{
-        display:flex
+        display:flex;
     }
     #menu > li {
         padding-left: 1rem;
@@ -263,10 +270,10 @@ main{
         line-height:75px;
         margin: 0 0.5rem;
     }
-    /*Main content*/
-    main{
-        /*Push main content down to accommodate larger header*/
-    margin-top: 60px;
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 60px;
     }
     /*Hero*/
     #cover-text{
@@ -292,16 +299,19 @@ main{
     #photos{
         column-count: 3;
     }
+    
+    /* Form */
     #signup {
         background-position: center;
         position: relative;
+        
     }
 
     #signup-form {
         max-width: 400px;
         position: absolute;
         left: 10%;
-        top: 150px;
+        top: 10px;
     }
 
     .text-input:hover {
@@ -312,7 +322,6 @@ main{
         background-color: #fafafa;
         color: #454b1b;
     }
-
 }
 /*Large devices (laptops and desktops, 992px and up)*/
 @media screen and (min-width: 992px) {
